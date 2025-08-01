@@ -256,7 +256,18 @@
     }
 
     function formatDOB(input) {
-      input.value = input.value.replace(/[^0-9]/g, '').replace(/(.{2})(.{2})(.{4})/, '$1/$2/$3');
+      let value = input.value.replace(/[^0-9]/g, '');
+
+      // Ensure format step by step
+      if (value.length > 2 && value.length <= 4) {
+        value = value.slice(0, 2) + '/' + value.slice(2);
+      } else if (value.length > 4) {
+        value = value.slice(0, 2) + '/' + value.slice(2, 4) + '/' + value.slice(4, 8);
+      } else if (value.length === 2) {
+        value = value + '/';
+      }
+
+      input.value = value;
     }
 
     function formatExpiry(input) {
